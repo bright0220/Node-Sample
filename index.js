@@ -1,3 +1,8 @@
-// run `node index.js` in the terminal
+var http = require('http');
 
-console.log(`Hello Node.js v${process.versions.node}!`);
+http
+  .createServer(function (req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/plain' });
+    res.end('Hello World');
+  })
+  .listen(8080);
