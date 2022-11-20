@@ -15,3 +15,8 @@ fs.appendFile('mynewfile1.txt', 'This is my Text', function (err) {
   if (err) throw err;
   console.log('Updated!');
 });
+
+fs.unlink('mynewfile2.txt', function (err) {
+  if (err) throw err;
+  console.log('File deleted!');
+});
